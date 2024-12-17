@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>404 - Page Not Found</title>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #ececec, #c8d6e5);
+            text-align: center;
+         }
+
+         h1 {
+            font-size: 6rem;
+            color: #ee5253;
+            margin: 0;
+         }
+
+         p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+         }
+
+         .animation {
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            position: relative;
+         }
+
+         .animation .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #ee5253;
+            position: absolute;
+            animation: bounce 2s infinite;
+         }
+
+         @keyframes bounce {
+            0%,
+            100% {
+               transform: translateY(0);
+            }
+            50% {
+               transform: translateY(-30px);
+            }
+         }
+
+         button {
+            background-color: #10ac84;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+         }
+
+         button:hover {
+            background-color: #1dd1a1;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>404</h1>
+      <div class="animation">
+         <div class="circle"></div>
+      </div>
+      <p>Oops! The page you're looking for doesn't exist.</p>
+      <button id="goHome">Take Me Home</button>
+
+      <script>
+         document.getElementById("goHome").addEventListener("click", function () {
+            window.location.href = "/" // Replace with your homepage URL
+         })
+      </script>
+   </body>
+</html>
